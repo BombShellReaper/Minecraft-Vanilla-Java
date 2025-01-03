@@ -129,9 +129,9 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     nano eula.txt
 
-- Change eula=false to eula=true.
+- Change `eula=false` to `eula=true`
 - Save and exit:
-  - Press Ctrl + X, then type Y, and press Enter.
+  - Press `Ctrl + X`, then type `Y`, and press `Enter`.
 
 
 ### 6. Configure Server Properties
