@@ -42,7 +42,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     sudo apt install nano
 
-#### 4. Install OpenSSH Server
+### 4. Install OpenSSH Server
 > OpenSSH enables secure remote access to your server:
 
     sudo apt install openssh-server -y
