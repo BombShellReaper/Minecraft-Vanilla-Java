@@ -272,9 +272,9 @@ These are some steps you can take to enhance the security of your SSH service.
 
 **Conclusion**
 
-You have successfully set up your factorio server! For further customization, refer to the game’s official documentation.
+You have successfully set up your Minecraft server! For further customization, refer to the game’s official documentation.
 
 
-- https://www.factorio.com/download
-- https://wiki.factorio.com/Multiplayer
+- [https://www.factorio.com/download](https://minecraft.wiki/w/Tutorial:Setting_up_a_server)
+- [https://wiki.factorio.com/Multiplayer](https://www.minecraft.net/en-us/download/server)
 - https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
