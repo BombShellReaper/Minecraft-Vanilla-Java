@@ -34,6 +34,10 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     sudo apt install openjdk-21-jdk-headless
 
+> **Install nano (Text Editor)**
+
+    sudo apt install nano
+
 > **Install OpenSSH Sever**
 
     sudo apt install openssh-server -y
