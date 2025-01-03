@@ -144,7 +144,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 # Step 7: Create a Startup Script (Optional)
 
-*** 1. Return to the User's Home Directory
+### 1. Return to the User's Home Directory
 > Navigate back to the home directory:
 
     cd
@@ -248,7 +248,7 @@ Update the following lines for improved security:
 
 These are some steps you can take to enhance the security of your SSH service.
 
-# Restrict the Use of the (`su`) Command
+# Restrict the Use of the `su` Command
 
 ### 1. Create a New Group
 > Replace `group_name` with your desired group name:
