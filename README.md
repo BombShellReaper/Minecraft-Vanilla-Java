@@ -231,8 +231,8 @@ This guide is not intended for complete beginners to Linux or server administrat
 > Run the following commands to activate the service:
 
     sudo systemctl daemon-reload
-    sudo systemctl enable factorio_server.service
-    sudo systemctl start factorio_server.service
+    sudo systemctl enable minecraft_server.service
+    sudo systemctl start minecraft_server.service
 
 > [!Important]
 >  *This systemd service, along with the accompanying script, ensures that your server automatically starts after a reboot.*
