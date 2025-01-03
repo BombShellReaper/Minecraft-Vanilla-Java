@@ -276,9 +276,9 @@ These are some steps you can take to enhance the security of your SSH service.
 
     sudo nano /etc/pam.d/su
 
-> Modify the following line, replacing group_name with the one you created earlier:
+> Modify the following line, replacing `group_name` with the one you created earlier:
 
-    auth       required   pam_wheel.so group=group_name
+`auth       required   pam_wheel.so group=group_name`
 
 - *Example:* `auth       required   pam_wheel.so group=restrictedsu` 
 
