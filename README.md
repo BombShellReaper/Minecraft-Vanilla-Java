@@ -203,13 +203,13 @@ This guide is not intended for complete beginners to Linux or server administrat
     RestartSec=5
     StartLimitIntervalSec=60
     StartLimitBurst=3
-    StandardOutput=/var/log/Minecraft_server.log    # Standard output and error logs. The log file location can be customized.
-    StandardError=/var/log/Minecraft_server.log     # Standard output and error logs. The log file location can be customized.
+    StandardOutput=/var/log/minecraft_server.log    # Standard output and error logs. The log file location can be customized.
+    StandardError=/var/log/minecraft_server.log     # Standard output and error logs. The log file location can be customized.
     
     [Install]
     WantedBy=multi-user.target
 
-> Example:
+- Example:
 > `User=test`
 > `ExecStart=/home/test/scripts/start_server.sh`
 
@@ -255,7 +255,7 @@ These are some steps you can take to enhance the security of your SSH service.
 
     sudo groupadd group_name
 
-> **Example:**
+- **Example:**
 > `sudo groupadd restrictedsu`
 
 **Edit who can use the *su* command**
