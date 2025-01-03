@@ -133,6 +133,8 @@ This guide is not intended for complete beginners to Linux or server administrat
 - Save and exit:
   - Press `Ctrl + X`, then type `Y`, and press `Enter`.
 
+> [!NOTE]
+> This is the step where you can place an existing `world` folder into the `server_dir_name directory`, if you have one.
 
 ### 6. Configure Server Properties
 > Modify the server's settings as needed:
