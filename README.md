@@ -95,15 +95,15 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 **Log in to your server with the new user account through cmd, PowerShell, PuTTY, etc. Use your preferred terminal emulator.**
 
-> **Make a Server Directory. Replace *server_dir_name* with the name you want**
+> **Make a Server Directory (Replace *server_dir_name* with the name you want)**
 
     mkdir -p server_dir_name
 
-> **Download The server Files**
+> **Download The server Files (Replace *server_dir_name* with the one your created eralier)**
 
-    wget -v -O ~/Downloads/server.jar (https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar)
+    wget -v -O ~/server_dir_name/server.jar (https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar)
 
-> **Navigate to the Server Directory. Replace *server_dir_name* with the one you created earlier**
+> **Navigate to the Server Directory (Replace *server_dir_name* with the one you created earlier)**
 
     cd ~/server_dir_name
 
