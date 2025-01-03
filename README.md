@@ -116,3 +116,4 @@ This guide is not intended for complete beginners to Linux or server administrat
     nano eula.txt
 
 > [!Important]
+> Change "eula=false" to "eula=true" and press "Ctrl + x" , then type "y" & press "enter"
