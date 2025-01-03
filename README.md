@@ -21,72 +21,81 @@ This guide is not intended for complete beginners to Linux or server administrat
 > Directory structures may differ based on your specific setup. Always check paths and ensure you're working in the correct directories to avoid issues.
 
 # Step 1: Update and Upgrade Your System
+> Keep your system up-to-date by running the following command:
 
     sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 # Step 2: Install Required Dependencies 
     
-> Install Screen (Session Manager)
+### 1. Install Screen (Session Manager)
+> Screen allows you to manage terminal sessions:
 
     sudo apt install screen -y
 
-> **Install Java**
+### 2. Install Java
+> Java is required to run the Minecraft server:
 
     sudo apt install openjdk-21-jdk-headless
 
-> **Install nano (Text Editor)**
+### 3. Install Nano (Text Editor)
+> Nano is a simple text editor for editing files:
 
     sudo apt install nano
 
-> **Install OpenSSH Sever**
+#### 4. Install OpenSSH Server
+> OpenSSH enables secure remote access to your server:
 
     sudo apt install openssh-server -y
+
 > [!NOTE]
 > This enables secure remote access to your server.
 
-> Install UFW (Uncomplicated Firewall)
+### 5. Install UFW (Uncomplicated Firewall)
+> UFW simplifies managing firewall rules:
 
     sudo apt install ufw -y
 
 # Step 3: Configure UFW (Uncomplicated Firewall)
 
-> Allow all incoming connections to port 25565 (This is the defualt server port):
+### 1. Allow Minecraft Server Port (25565)
+> This is the default port used by Minecraft servers:
 
     sudo ufw allow from any to any port 25565 comment "Minecraft Server Port"
 
 > [!TIP]
 > For improved security, restrict access to only trusted IP addresses.
 
-**Allow SSH Connections Through UFW** (Optional)
+### 2. Allow SSH Connections (Optional)
+> If managing your server remotely, allow SSH traffic (port 22):
 
     sudo ufw allow from any to any port 22 comment "SSH"
 
 > [!TIP]
 > For improved security, restrict access to only trusted IP addresses.
 
-> Set the default rule to deny incoming traffic (Optional)
+### 3. Set Default Rules (Optional)
+> Deny all incoming traffic by default:
 
     sudo ufw default deny incoming
 
-> **Enable UFW** (UFW will enable on reboot)
+### 4. Enable UFW
+> Activate the firewall:
 
     sudo ufw enable
-
-> Check the UFW status after enabling it:
-
-    sudo ufw status
     
 --------------------------------------------------------------------------------
 # Step 4: Create a Non Sudo User
 
-> Replace "*your_username*" with the desired username.
+### 1. Add a New User
+> Replace your_username with your desired username:
 
     sudo adduser your_username
 
 > [!NOTE]
 > This will prompt you through the setup
 
-> **Reboot the system**
+### 2. Reboot the System
+> Restart your system to ensure all changes take effect:
 
     sudo reboot
 
