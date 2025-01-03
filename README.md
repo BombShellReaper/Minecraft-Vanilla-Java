@@ -100,24 +100,30 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     mkdir -p server_dir_name
 
-> **Download The server Files (Replace *server_dir_name* with the one your created eralier)**
+### 2. Download the Server Files
+> Replace `server_dir_name` with the directory name you created earlier:
 
     wget -v -O ~/server_dir_name/server.jar https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 
-> **Navigate to the Server Directory (Replace *server_dir_name* with the one you created earlier)**
+### 3. Navigate to the Server Directory
+> Move into the directory you created:
 
     cd ~/server_dir_name
 
-> **Start the server**
+### 4. Start the Server
+> Run the server with the following command:
 
     java -Xmx1024M -Xms1024M -jar server.jar nogui
 
-> **Edit the EULA**
+### 5. Accept the EULA
+> Edit the EULA file to agree to Minecraft's End User License Agreement:
 
     nano eula.txt
 
-> [!Important]
-> Change "eula=false" to "eula=true" and press "Ctrl + x" , then type "y" & press "enter"
+- Change eula=false to eula=true.
+- Save and exit:
+  - Press Ctrl + X, then type Y, and press Enter.
+
 
 > **Edit the Server Properties**
 
