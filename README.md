@@ -278,7 +278,7 @@ These are some steps you can take to enhance the security of your SSH service.
 
 > Modify the following line, replacing `group_name` with the one you created earlier:
 
-`auth       required   pam_wheel.so group=group_name`
+    auth       required   pam_wheel.so group=group_name
 
 - *Example:* `auth       required   pam_wheel.so group=restrictedsu` 
 
