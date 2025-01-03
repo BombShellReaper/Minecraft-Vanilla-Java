@@ -167,21 +167,30 @@ This guide is not intended for complete beginners to Linux or server administrat
     cd name
 
 ### 4. Create a Startup Script
-> Replace `factorio_server_manager.sh` with your desired script name, but ensure consistency in the following instructions:
+> Replace `start_server.sh` with your desired script name, but ensure consistency in the following instructions:
 
-    nano factorio_server_manager.sh
+    nano start_server.sh
 
 ### 5. Make the Script Executable
 > Allow the user to execute the script:
 
-    chmod +x factorio_server_manager.sh
+    chmod +x start_server.sh
 
 ### 6. Copy and Edit the Script Variables
 > Below is an example script template to customize:
 
     #!/bin/bash
     
-    set -e  # Exit on any error
+    # Variables
+    SERVER_DIR="$HOME/server_dir_name"           # Change this to the directory you created earlier
+    MEMORY_SETTINGS="-Xmx1024M -Xms1024M"        # Adjust based on your server's requirements
+    
+    # Start the server in a detached screen session
+    screen -dmS Minecraft_Server bash -c "cd \"$SERVER_DIR\" && java $MEMORY_SETTINGS -jar server.jar nogui"
+    
+    echo "Minecraft server started in screen session 'Minecraft_Server'."
+
+
 
 # Step 8: Create a Systemd Service (Optional)
 
