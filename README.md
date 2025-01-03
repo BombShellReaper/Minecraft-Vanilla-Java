@@ -255,7 +255,8 @@ These are some steps you can take to enhance the security of your SSH service.
 
     sudo groupadd group_name
 
-> **Example:** 
+> **Example:**
+
 > *sudo groupadd restrictedsu*
 
 **Edit who can use the *su* command**
