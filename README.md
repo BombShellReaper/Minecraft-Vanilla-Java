@@ -125,9 +125,10 @@ This guide is not intended for complete beginners to Linux or server administrat
   - Press Ctrl + X, then type Y, and press Enter.
 
 
-> **Edit the Server Properties**
+### 6. Configure Server Properties
+> Modify the server's settings as needed:
 
     nano server.properties
 
 > [!NOTE]
-> This is where you can edit the server IP address, server port, etc. Make sure you know what you are doing before making changes.
+> This file allows you to configure options like the server's IP address and port. Be cautious and ensure you understand the changes you make.
