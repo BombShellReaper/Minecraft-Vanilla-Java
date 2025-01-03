@@ -1,10 +1,10 @@
 # Setting Up a Dedicated Minecraft (Vanilla) Server
 
-### **Overview**
+## **Overview**
 
 - This is a step-by-step guide on how to set up and run a Factorio server.
 
-### **Prerequisites**
+## **Prerequisites**
 
 This guide is not intended for complete beginners to Linux or server administration. It assumes the following:
 
