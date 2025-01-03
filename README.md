@@ -112,7 +112,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 ### 2. Download the Server Files
 > Replace `server_dir_name` with the directory name you created earlier:
 
-    wget -v -O ~/server_dir_name/server.jar https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
+    wget -v -O "$HOME/server_dir_name/server.jar" https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 
 ### 3. Navigate to the Server Directory
 > Move into the directory you created:
