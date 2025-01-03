@@ -209,10 +209,10 @@ This guide is not intended for complete beginners to Linux or server administrat
     [Install]
     WantedBy=multi-user.target
 
-> ### Example:
-> ## Replace:
->  - User=test
->  - ExecStart=/home/test/scripts/palworld.sh
+> Example:
+> ### Replace:
+> `User=test`
+> `ExecStart=/home/test/scripts/start_server.sh`
 
 **Enable and Start the Service**
 
