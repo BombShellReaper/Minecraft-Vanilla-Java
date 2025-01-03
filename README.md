@@ -95,7 +95,8 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 **Log in to your server with the new user account through cmd, PowerShell, PuTTY, etc. Use your preferred terminal emulator.**
 
-> **Make a Server Directory (Replace *server_dir_name* with the name you want)**
+1. Create a Server Directory
+> Replace `server_dir_name` with your desired directory name:
 
     mkdir -p server_dir_name
 
@@ -121,3 +122,6 @@ This guide is not intended for complete beginners to Linux or server administrat
 > **Edit the Server Properties**
 
     nano server.properties
+
+> [!NOTE]
+> This is where you can edit the server IP address, server port, etc. Make sure you know what you are doing before making changes.
