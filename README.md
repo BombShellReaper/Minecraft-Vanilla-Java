@@ -202,7 +202,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 ### 2. Create the Systemd Service File
 > Create the service configuration file:
 
-    sudo nano /etc/systemd/system/factorio_server.service
+    sudo nano /etc/systemd/system/minecraft_server.service
 
 ### 3. Add the Service Configuration
 > Below is a sample configuration:
