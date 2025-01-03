@@ -50,9 +50,9 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 # Step 3: Configure UFW (Uncomplicated Firewall)
 
-> Allow all incoming connections to port 34197:
+> Allow all incoming connections to port 25565 (This is the defualt server port):
 
-    sudo ufw allow from any proto udp to any port 34197 comment "Factorio Server Port"
+    sudo ufw allow from any to any port 25565 comment "Minecraft Server Port"
 
 > [!TIP]
 > For improved security, restrict access to only trusted IP addresses.
