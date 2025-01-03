@@ -141,3 +141,149 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 > [!NOTE]
 > This file allows you to configure options like the server's IP address and port. Be cautious and ensure you understand the changes you make.
+
+# Step 7: Create a Startup Script (Optional)
+
+*** 1. Return to the User's Home Directory
+> Navigate back to the home directory:
+
+    cd
+
+### 2. Create a Directory for Scripts
+> Replace `name` with your desired directory name:
+
+    mkdir name
+
+### 3. Navigate to the New Directory
+> Change to the directory you just created:
+
+    cd name
+
+### 4. Create a Startup Script
+> Replace `factorio_server_manager.sh` with your desired script name, but ensure consistency in the following instructions:
+
+    nano factorio_server_manager.sh
+
+### 5. Make the Script Executable
+> Allow the user to execute the script:
+
+    chmod +x factorio_server_manager.sh
+
+### 6. Copy and Edit the Script Variables
+> Below is an example script template to customize:
+
+    #!/bin/bash
+    
+    set -e  # Exit on any error
+
+# Step 8: Create a Systemd Service (Optional)
+
+### 1. Switch to Your Sudo User
+> Replace `your_username` with the actual username used earlier:
+
+    su your_username
+
+### 2. Create the Systemd Service File
+> Create the service configuration file:
+
+    sudo nano /etc/systemd/system/factorio_server.service
+
+### 3. Add the Service Configuration
+> Below is a sample configuration:
+
+    [Unit]
+    Description=Custom Game Server
+    After=network.target
+    
+    [Service]
+    Type=simple
+    User=yourusername                          # Define the user under which the service will run. Default is "user".
+    ExecStart=/path/to/start_server.sh         # Path to the script that starts the server. 
+    Restart=on-failure
+    RestartSec=5
+    StartLimitIntervalSec=60
+    StartLimitBurst=3
+    StandardOutput=/var/log/game_server.log    # Standard output and error logs. The log file location can be customized.
+    StandardError=/var/log/game_server.log     # Standard output and error logs. The log file location can be customized.
+    
+    [Install]
+    WantedBy=multi-user.target
+
+> ### Example:
+> ## Replace:
+>  - User=test
+>  - ExecStart=/home/test/scripts/palworld.sh
+
+**Enable and Start the Service**
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable factorio_server.service
+    sudo systemctl start factorio_server.service
+
+> [!Important]
+>  *This systemd service, along with the accompanying script, ensures that your server automatically starts after a reboot.*
+
+# Step 9: Hardening (Optional)
+
+> Login with the sudo user and edit the sshd_config file
+
+    sudo nano /etc/ssh/sshd_config
+
+Locate the following lines and uncomment them, making the specified edits:
+
+> **LoginGraceTime 2m**
+
+    LoginGraceTime 1m
+
+> **PermitRootLogin prohibit-password**
+
+    PermitRootLogin no
+
+> **MaxSessions 10**
+
+    Max Sessions 4
+
+> Reload systemctl & restart sshd.services
+
+    sudo systemctl daemon-reload
+    sudo systemctl restart ssh.service
+
+> **Example:**
+
+![image](https://github.com/user-attachments/assets/f12f25af-807d-4981-9e53-ebe2ab3d2688)
+
+These are some steps you can take to enhance the security of your SSH service.
+
+# Change Who Can Use the Switch User (su) Command
+
+Make a new group for the su command. Replace "*group_name*" with your desired name for the new group.
+
+    sudo groupadd group_name
+
+> **Example:** *sudo groupadd restrictedsu*
+
+**Edit who can use the *su* command**
+
+> Edit the *su* config
+
+    sudo nano /etc/pam.d/su
+
+> Edit the following line to restrict su. Replace "*group_name*" with the one you made ealier.
+
+    auth       required   pam_wheel.so group=group_name
+
+> **Example:** *auth       required   pam_wheel.so group=restrictedsu*
+
+**Example:** 
+
+![image](https://github.com/user-attachments/assets/3d3c941b-aadd-4bdb-b736-e2fb4c7b5c8b)
+
+
+**Conclusion**
+
+You have successfully set up your factorio server! For further customization, refer to the game’s official documentation.
+
+
+- https://www.factorio.com/download
+- https://wiki.factorio.com/Multiplayer
+- https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
