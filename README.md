@@ -110,3 +110,9 @@ This guide is not intended for complete beginners to Linux or server administrat
 > **Start the server**
 
     java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+> **Edit the EULA**
+
+    nano eula.text
+
+
