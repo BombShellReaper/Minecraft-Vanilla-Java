@@ -209,9 +209,7 @@ This guide is not intended for complete beginners to Linux or server administrat
     [Install]
     WantedBy=multi-user.target
 
-- Example:
-> `User=test`
-> `ExecStart=/home/test/scripts/start_server.sh`
+- *Example:* `User=test` & `ExecStart=/home/test/scripts/start_server.sh`
 
 ### 4. Enable and Start the Service
 > Run the following commands to activate the service:
@@ -242,7 +240,7 @@ Update the following lines for improved security:
     sudo systemctl daemon-reload
     sudo systemctl restart ssh.service
 
-> **Example:**
+- *Example:*
 
 ![image](https://github.com/user-attachments/assets/f12f25af-807d-4981-9e53-ebe2ab3d2688)
 
@@ -255,8 +253,7 @@ These are some steps you can take to enhance the security of your SSH service.
 
     sudo groupadd group_name
 
-- **Example:**
-> `sudo groupadd restrictedsu`
+- *Example:* `sudo groupadd restrictedsu`
 
 **Edit who can use the *su* command**
 
@@ -268,10 +265,7 @@ These are some steps you can take to enhance the security of your SSH service.
 
     auth       required   pam_wheel.so group=group_name
 
-> **Example:** 
-> `auth       required   pam_wheel.so group=restrictedsu`
-
-**Example:** 
+- *Example:* `auth       required   pam_wheel.so group=restrictedsu` 
 
 ![image](https://github.com/user-attachments/assets/3d3c941b-aadd-4bdb-b736-e2fb4c7b5c8b)
 
