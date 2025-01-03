@@ -255,13 +255,12 @@ These are some steps you can take to enhance the security of your SSH service.
 
 - *Example:* `sudo groupadd restrictedsu`
 
-**Edit who can use the *su* command**
-
-> Edit the *su* config
+### 2. Restrict su Access
+> Edit the su configuration file:
 
     sudo nano /etc/pam.d/su
 
-> Edit the following line to restrict su. Replace "*group_name*" with the one you made ealier.
+> Modify the following line, replacing group_name with the one you created earlier:
 
     auth       required   pam_wheel.so group=group_name
 
