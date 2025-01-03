@@ -91,7 +91,7 @@ This guide is not intended for complete beginners to Linux or server administrat
     sudo reboot
 
 -------------------------------------------------------------------------------
-# Step 5: Download the Factorio Dedicated Server Files & Set-Up
+# Step 5: Download the Minecraft Dedicated Server Files & Set-Up
 
 **Log in to your server with the new user account through cmd, PowerShell, PuTTY, etc. Use your preferred terminal emulator.**
 
