@@ -203,18 +203,18 @@ This guide is not intended for complete beginners to Linux or server administrat
     RestartSec=5
     StartLimitIntervalSec=60
     StartLimitBurst=3
-    StandardOutput=/var/log/game_server.log    # Standard output and error logs. The log file location can be customized.
-    StandardError=/var/log/game_server.log     # Standard output and error logs. The log file location can be customized.
+    StandardOutput=/var/log/Minecraft_server.log    # Standard output and error logs. The log file location can be customized.
+    StandardError=/var/log/Minecraft_server.log     # Standard output and error logs. The log file location can be customized.
     
     [Install]
     WantedBy=multi-user.target
 
 > Example:
-> ### Replace:
 > `User=test`
 > `ExecStart=/home/test/scripts/start_server.sh`
 
-**Enable and Start the Service**
+### 4. Enable and Start the Service
+> Run the following commands to activate the service:
 
     sudo systemctl daemon-reload
     sudo systemctl enable factorio_server.service
@@ -225,25 +225,19 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 # Step 9: Hardening (Optional)
 
-> Login with the sudo user and edit the sshd_config file
+### 1. Edit the SSH Configuration
+> Log in as the sudo user and edit the SSH daemon configuration file:
 
     sudo nano /etc/ssh/sshd_config
 
-Locate the following lines and uncomment them, making the specified edits:
-
-> **LoginGraceTime 2m**
+Update the following lines for improved security:
 
     LoginGraceTime 1m
-
-> **PermitRootLogin prohibit-password**
-
     PermitRootLogin no
+    MaxSessions 4
 
-> **MaxSessions 10**
-
-    Max Sessions 4
-
-> Reload systemctl & restart sshd.services
+### 2. Reload and Restart the SSH Service
+> Apply the changes by reloading systemd and restarting the SSH service:
 
     sudo systemctl daemon-reload
     sudo systemctl restart ssh.service
@@ -254,9 +248,10 @@ Locate the following lines and uncomment them, making the specified edits:
 
 These are some steps you can take to enhance the security of your SSH service.
 
-# Change Who Can Use the Switch User (su) Command
+# Restrict the Use of the (`su`) Command
 
-Make a new group for the su command. Replace "*group_name*" with your desired name for the new group.
+### 1. Create a New Group
+> Replace `group_name` with your desired group name:
 
     sudo groupadd group_name
 
