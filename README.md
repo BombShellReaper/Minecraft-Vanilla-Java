@@ -115,4 +115,4 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     nano eula.txt
 
-
+> [!Important]
