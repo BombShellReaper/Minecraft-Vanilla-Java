@@ -99,17 +99,9 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     mkdir -p server_dir_name
 
-> **Make a Downloads Directory. You can replace *Downloads* with any name you want.**
-
-    mkdir Downloads
-
 > **Download The server Files**
 
     wget -v -O ~/Downloads/server.jar (https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar)
-
-> **Copy The file in the Downloads Directory to The Server Directory (Replace "server_dir_name with the one you created earlier)**
-
-    cp ~/Downloads/server.jar ~/server_dir_name
 
 > **Navigate to the Server Directory. Replace *server_dir_name* with the one you created earlier**
 
