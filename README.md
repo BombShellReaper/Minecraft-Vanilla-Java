@@ -213,7 +213,7 @@ This guide is not intended for complete beginners to Linux or server administrat
     
     [Service]
     Type=simple
-    User=yourusername                          # Define the user under which the service will run. Default is "user".
+    User=yourusername                          # Define the user under which the service will run.
     ExecStart=/path/to/start_server.sh         # Path to the script that starts the server. 
     Restart=on-failure
     RestartSec=5
