@@ -144,6 +144,11 @@ This guide is not intended for complete beginners to Linux or server administrat
 > [!NOTE]
 > This file allows you to configure options like the server's IP address and port. Be cautious and ensure you understand the changes you make.
 
+### 7. Restart the Server 
+> RUse the following command to start the server again:
+
+    java -Xmx1024M -Xms1024M -jar server.jar nogui
+
 # Step 7: Create a Startup Script (Optional)
 
 ### 1. Return to the User's Home Directory
