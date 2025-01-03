@@ -117,3 +117,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 > [!Important]
 > Change "eula=false" to "eula=true" and press "Ctrl + x" , then type "y" & press "enter"
+
+> **Edit the Server Properties**
+
+    nano server.properties
