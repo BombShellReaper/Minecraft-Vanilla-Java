@@ -144,10 +144,10 @@ This guide is not intended for complete beginners to Linux or server administrat
 > [!NOTE]
 > This file allows you to configure options like the server's IP address and port. Be cautious and ensure you understand the changes you make.
 
-### 7. Restart the Server 
-> RUse the following command to start the server again:
+### 7. Restart the Server Using Screen
+> To restart the server within a screen session, use the following command. Replace `server_dir_name` with the name of the directory you created earlier:
 
-    java -Xmx1024M -Xms1024M -jar server.jar nogui
+    screen -dmS Minecraft_Server bash -c 'cd ~/server_dir_name && java -Xmx1024M -Xms1024M -jar server.jar nogui'
 
 # Step 7: Create a Startup Script (Optional)
 
