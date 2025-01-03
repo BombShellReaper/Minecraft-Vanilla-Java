@@ -95,7 +95,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 **Log in to your server with the new user account through cmd, PowerShell, PuTTY, etc. Use your preferred terminal emulator.**
 
-## 1. Create a Server Directory
+# 1. Create a Server Directory
 > Replace `server_dir_name` with your desired directory name:
 
     mkdir -p server_dir_name
