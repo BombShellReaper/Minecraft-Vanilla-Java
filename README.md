@@ -113,6 +113,6 @@ This guide is not intended for complete beginners to Linux or server administrat
 
 > **Edit the EULA**
 
-    nano eula.text
+    nano eula.txt
 
 
