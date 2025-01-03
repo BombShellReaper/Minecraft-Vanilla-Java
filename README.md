@@ -14,7 +14,6 @@ This guide is not intended for complete beginners to Linux or server administrat
   root login.
 > - Access to a Linux server: You should have a VPS or dedicated server with a fresh installation of a supported Linux distribution (Ubuntu or Debian recommended).
 > - Root or Sudo privileges: You need to be able to execute administrative commands (with sudo or as root) on the server.
-
 > - If you are not familiar with these concepts, you may want to spend some time with basic Linux tutorials before proceeding. This guide will walk you through the setup step-by-step, but we won’t be able to 
   cover fundamental Linux concepts in detail. You can find helpful resources online, such as the Linux Foundation’s tutorials, or consider following beginner guides for server setup.
 
