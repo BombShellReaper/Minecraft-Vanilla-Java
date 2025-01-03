@@ -8,7 +8,7 @@
 
 This guide is not intended for complete beginners to Linux or server administration. It assumes the following:
 
-### - Basic knowledge of Linux: You should be comfortable using the terminal (command line), understanding file system paths, and basic Linux commands like cd, ls, mkdir, and cp.
+# - Basic knowledge of Linux: You should be comfortable using the terminal (command line), understanding file system paths, and basic Linux commands like cd, ls, mkdir, and cp.
  - Basic networking understanding: Familiarity with concepts like IP addresses, ports, and SSH will help as you configure remote access to your server.
  - Experience with server setup: You should have some experience setting up and managing servers. This includes installing packages, configuring firewalls, and understanding security practices like disabling 
   root login.
