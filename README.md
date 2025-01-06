@@ -171,12 +171,7 @@ This guide is not intended for complete beginners to Linux or server administrat
 
     nano start_server.sh
 
-### 5. Make the Script Executable
-> Allow the user to execute the script:
-
-    chmod +x start_server.sh
-
-### 6. Copy and Edit the Script Variables
+### 5. Copy and Edit the Script Variables
 > Below is an example script template to customize:
 
     #!/bin/bash
@@ -190,7 +185,10 @@ This guide is not intended for complete beginners to Linux or server administrat
     
     echo "Minecraft server started in screen session 'Minecraft_Server'."
 
+### 6. Make the Script Executable
+> Allow the user to execute the script:
 
+    chmod +x start_server.sh
 
 # Step 8: Create a Systemd Service (Optional)
 
